@@ -71,6 +71,7 @@ export async function createVerifiableCredentialJwt(
     iat: undefined,
     ...transformCredentialInput(payload, options.removeOriginalFields),
   }
+  console.log("hello world")
   validateJwtCredentialPayload(parsedPayload)
   return createJWT(
     parsedPayload,
